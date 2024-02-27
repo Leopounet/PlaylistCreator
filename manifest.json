@@ -1,14 +1,43 @@
 {
     "description": "Adds a button to blind test sites in order to add a song to a defined playlist on Spotify.",
-    "manifest_version": 1,
+    "manifest_version": 2,
     "name": "PlaylistCreator",
     "version": "1.0",
     "homepage_url": "https://github.com/Leopounet/PlaylistCreator",
 
+    "icons": {
+        "48": "icons/vinyl-48.png"
+    },
+
     "content_scripts": [
         {
-            "matches": ["*://*.mozilla.org/*"],
-            "js": ["PlaylistCreator.ts"]
+            "matches": [
+                "https://whatthetune.com/*",
+                "https://leopounet.github.io/*",
+                "https://accounts.spotify.com/*"
+            ],
+            "js": ["./dist/common/PlaylistCreator.js"]
         }
-    ]
+    ],
+
+    "options_ui": {
+        "page": "./html/options.html"
+    },
+
+    "background": {
+        "scripts": ["./dist/common/background.js"]
+    },
+
+    "permissions": [
+        "activeTab",
+        "storage",
+        "https://accounts.spotify.com/*",
+        "https://api.spotify.com/*"
+    ],
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "playlistcreator@leopounet.com"
+        }
+    }
 }

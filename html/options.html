@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            body {
+                font-family: "Arial", sans-serif;
+                background-color: #f4f4f4;
+                text-align: center;
+                margin: 50px;
+            }
+
+            form {
+                display: inline-block;
+                margin: 20px;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                background-color: #fff;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            input {
+                width: 200px;
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            button {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+
+            button#idButton,
+            button#secretButton,
+            button#playlistButton,
+            button#redirectButton {
+                background-color: #4caf50; /* Green */
+                color: #fff;
+            }
+
+            button#debugButton {
+                background-color: #2196f3; /* Blue */
+                color: #fff;
+                margin-bottom: 20px; /* Added vertical space */
+            }
+
+            button#resetButton {
+                background-color: #f44336; /* Red */
+                color: #fff;
+            }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+            button.reset:hover {
+                background-color: #d32f2f;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form id="IDForm">
+            <label for="clientId">Client ID:</label>
+            <input type="text" id="clientId" name="clientId" />
+            <button type="button" id="idButton">Save</button>
+        </form>
+
+        <form id="SecretForm">
+            <label for="clientSecret">Client Secret:</label>
+            <input type="text" id="clientSecret" name="clientSecret" />
+            <button type="button" id="secretButton">Save</button>
+        </form>
+
+        <form id="PlaylistForm">
+            <label for="playlistName">Playlist Name:</label>
+            <input type="text" id="playlistName" name="playlistName" />
+            <button type="button" id="playlistButton">Save</button>
+        </form>
+
+        <form id="RedirectURLForm">
+            <label for="redirectURI">Redirect URI:</label>
+            <input type="text" id="redirectURI" name="redirectURI" />
+            <button type="button" id="redirectButton">Save</button>
+        </form>
+
+        <!-- <button id="debugButton">Toggle Debug Mode</button> -->
+        <button type="button" id="resetButton">Reset Data</button>
+        <script src="../dist/common/option.js"></script>
+    </body>
+</html>

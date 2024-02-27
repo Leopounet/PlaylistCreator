@@ -1,6 +1,23 @@
 {
     "compilerOptions": {
-        "outDir": "./build/"
+        "outDir": "./build/",
+        "module": "es2022",
+        "target": "es2022",
+        "moduleResolution": "node"
     },
-    "include": ["*.ts"]
+    "include": [
+        "*.ts",
+        "src/spotify/SongInformation.ts",
+        "src/spotify/SpotifyWrapper.ts",
+        "src/common/Storage.ts",
+        "src/whatthetune/WhatTheTuneAPI.ts",
+        "src/whatthetune/WhatTheTuneButtons.ts",
+        "src/whatthetune/WhatTheTuneStyles.ts",
+        "src/common/PlaylistCreator.ts",
+        "src/common/option.ts",
+        "src/common/AbstractWebsiteAPI.ts",
+        "src/common/background.ts",
+        "src/common/Interfaces.ts",
+        "src/common/Utils.ts"
+    ]
 }
